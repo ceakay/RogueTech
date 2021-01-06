@@ -1,0 +1,277 @@
+{
+  "Custom": {
+    "Category": [
+      {
+        "CategoryID": "SpecialMelee"
+      }
+    ],
+    "MechConfiguration": { },
+    "BonusDescriptions": {
+      "Bonuses": [
+        "SpecialMelee: 9",
+		"PhysicalWeapon: 0.2",
+        "PhysicalWeaponPunch",
+        "CBTBEChargeDamage: 15",
+		"CBTBEChargeDamageMulti: +20%",
+		"CBTBEChargeDamageMultiSelf: -20%",
+        "CBTBEPhysicalAttackAccuracy: +1",
+        "CBTBEPhysicalAttackDamage: 63",
+        "CBTBEPhysicalAttackStability: 27",
+        "HandHeldArmored"
+      ]
+    },
+    "InventorySorter": {
+      "SortKey": "00020"
+    },
+    "Flags": {
+      "flags": [
+        "not_broken",
+        "autorepair",
+        "ignore_damage",
+		"no_salvage"
+      ]
+    },
+    "HandHeld": {
+      "Tonnage": 9,
+      "HandsUsed": true
+    }
+  },
+  "StatName": null,
+  "RelativeModifier": 0,
+  "AbsoluteModifier": 0,
+  "Description": {
+    "Cost": 1000000,
+    "Rarity": 30,
+    "Purchasable": false,
+    "Manufacturer": "Vining Engineering and Salvage Team",
+    "Model": "Gunnr",
+    "UIName": "Spear 9T",
+    "Id": "Special_Spear_9tons",
+    "Name": "Spear 9T",
+    "Details": "The Spear is a large spear-like weapon carried in the hand. While not nearly as damaging as Swords, Hatchets, or Maces in normal hand-to-hand combat, Spears are considerably more dangerous than any of its other melee weapon cousins in the hands of a charging Mech.",
+    "Icon": "uixSvgIcon_run_n_gun"
+  },
+  "BonusValueA": "",
+  "BonusValueB": "",
+  "ComponentType": "Upgrade",
+  "ComponentSubType": "NotSet",
+  "PrefabIdentifier": "",
+  "BattleValue": 0,
+  "InventorySize": 1,
+  "Tonnage": 0,
+  "AllowedLocations": "CenterTorso",
+  "DisallowedLocations": "All",
+  "CriticalComponent": false,
+  "statusEffects": [
+    {
+      "durationData": {
+        "duration": -1,
+        "stackLimit": -1
+      },
+      "targetingData": {
+        "effectTriggerType": "Passive",
+        "effectTargetType": "Creator",
+        "showInTargetPreview": false,
+        "showInStatusPanel": false
+      },
+      "effectType": "StatisticEffect",
+      "Description": {
+        "Id": "IsPhysicalWeapon",
+        "Name": "Melee Weapon Damage Mod",
+        "Details": "Damage Modifier",
+        "Icon": "uixSvgIcon_equipment_ActuatorArm"
+      },
+      "nature": "Buff",
+      "statisticData": {
+        "statName": "CBTBE_Punch_Is_Physical_Weapon",
+        "operation": "Set",
+        "modValue": "true",
+        "modType": "System.Boolean"
+      }
+    },
+    {
+      "durationData": {
+        "duration": -1,
+        "stackLimit": -1
+      },
+      "targetingData": {
+        "effectTriggerType": "Passive",
+        "effectTargetType": "Creator",
+        "showInTargetPreview": false,
+        "showInStatusPanel": false
+      },
+      "effectType": "StatisticEffect",
+      "Description": {
+        "Id": "PhysicalWeaponLocation",
+        "Name": "Physical Weapon Hit Location",
+        "Details": "This is a physical weapon and hits like a normal weapon.",
+        "Icon": "uixSvgIcon_equipment_Gyro"
+      },
+      "nature": "Buff",
+      "statisticData": {
+        "statName": "CBTBE_Physical_Weapon_Location_Table",
+        "operation": "Set",
+        "modValue": "PUNCH",
+        "modType": "System.String"
+      }
+    },
+    {
+      "durationData": {
+        "duration": -1,
+        "stackLimit": -1
+      },
+      "targetingData": {
+        "effectTriggerType": "Passive",
+        "effectTargetType": "Creator",
+        "showInTargetPreview": false,
+        "showInStatusPanel": false
+      },
+      "effectType": "StatisticEffect",
+      "Description": {
+        "Id": "Sword_Damage_Mod",
+        "Name": "Melee Weapon Damage Mod",
+        "Details": "Damage Modifier",
+        "Icon": "uixSvgIcon_equipment_ActuatorArm"
+      },
+      "nature": "Buff",
+      "statisticData": {
+        "statName": "CBTBE_Physical_Weapon_Target_Damage_Mod",
+        "operation": "Int_Add",
+        "modValue": "63",
+        "modType": "System.Int32"
+      }
+    },
+    {
+      "durationData": {
+        "duration": -1,
+        "stackLimit": -1
+      },
+      "targetingData": {
+        "effectTriggerType": "Passive",
+        "effectTargetType": "Creator",
+        "showInTargetPreview": false,
+        "showInStatusPanel": false
+      },
+      "effectType": "StatisticEffect",
+      "Description": {
+        "Id": "Sword_Stability_Mod",
+        "Name": "Melee Weapon Damage Mod",
+        "Details": "Damage Modifier",
+        "Icon": "uixSvgIcon_equipment_ActuatorArm"
+      },
+      "nature": "Buff",
+      "statisticData": {
+        "statName": "CBTBE_Physical_Weapon_Target_Instability_Mod",
+        "operation": "Int_Add",
+        "modValue": "27",
+        "modType": "System.Int32"
+      }
+    },
+    {
+      "durationData": {
+        "duration": -1,
+        "stackLimit": 1
+      },
+      "targetingData": {
+        "effectTriggerType": "Passive",
+        "effectTargetType": "Creator",
+        "showInTargetPreview": false,
+        "showInStatusPanel": false
+      },
+      "effectType": "StatisticEffect",
+      "Description": {
+        "Id": "MeleeAccuracy_Sword",
+        "Name": "MeleeWeapon Accuracy Modifier",
+        "Details": "MeleeWeapon Accuracy Modifier",
+        "Icon": "uixSvgIcon_run_n_gun"
+      },
+      "nature": "Buff",
+      "statisticData": {
+        "statName": "CBTBE_Physical_Weapon_Attack_Mod",
+        "operation": "Int_Add",
+        "modValue": "-1",
+        "modType": "System.Int32"
+      }
+    },
+    {
+      "durationData": {
+        "duration": -1,
+        "stackLimit": -1
+      },
+      "targetingData": {
+        "effectTriggerType": "Passive",
+        "effectTargetType": "Creator"
+      },
+      "effectType": "StatisticEffect",
+      "Description": {
+        "Id": "SpikedPlatesMelee",
+        "Name": "Jump Distance",
+        "Details": "Charge Damage increased by 20%",
+        "Icon": "uixSvgIcon_ability_mastertactician"
+      },
+      "statisticData": {
+        "statName": "CBTBE_Charge_Target_Damage_Multi",
+        "operation": "Float_Multiply",
+        "modValue": "1.2",
+        "modType": "System.Single"
+      },
+      "nature": "Buff"
+    },
+    {
+      "durationData": {
+        "duration": -1,
+        "stackLimit": -1
+      },
+      "targetingData": {
+        "effectTriggerType": "Passive",
+        "effectTargetType": "Creator"
+      },
+      "effectType": "StatisticEffect",
+      "Description": {
+        "Id": "SpikedPlatesMelee",
+        "Name": "Jump Distance",
+        "Details": "Charge Self Damage decreased by 20%",
+        "Icon": "uixSvgIcon_ability_mastertactician"
+      },
+      "statisticData": {
+        "statName": "CBTBE_Charge_Attacker_Damage_Multi",
+        "operation": "Float_Multiply",
+        "modValue": "0.8",
+        "modType": "System.Single"
+      },
+      "nature": "Buff"
+    },
+    {
+      "durationData": {
+        "duration": -1,
+        "stackLimit": -1
+      },
+      "targetingData": {
+        "effectTriggerType": "Passive",
+        "effectTargetType": "Creator"
+      },
+      "effectType": "StatisticEffect",
+      "Description": {
+        "Id": "SpikedPlatesMelee",
+        "Name": "Jump Distance",
+        "Details": "Charge Damage Increased by 15 per hex",
+        "Icon": "uixSvgIcon_ability_mastertactician"
+      },
+      "statisticData": {
+        "statName": "CBTBE_Charge_Target_Damage_Mod",
+        "operation": "Int_Add",
+        "modValue": "15",
+        "modType": "System.Single"
+      },
+      "nature": "Buff"
+    }
+
+  ],
+  "ComponentTags": {
+    "items": [
+      "component_type_stock",
+      "HandHeld"
+    ],
+    "tagSetSourceFile": ""
+  }
+}

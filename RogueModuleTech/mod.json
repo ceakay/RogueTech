@@ -315,6 +315,10 @@
 		},
 		{
 			"Type": "UpgradeDef",
+			"Path": "Widget/Spear"
+		},
+		{
+			"Type": "UpgradeDef",
 			"Path": "Widget/Sword"
 		},
 		{
